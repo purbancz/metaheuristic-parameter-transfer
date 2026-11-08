@@ -1,0 +1,89 @@
+{
+ "name": "popswap_2026_11_continuous_takes_subset",
+ "preamble": {
+  "kind": "control",
+  "role": "control",
+  "summary": "Population-size swap: for SHADE, L-SHADE, L-SRTDE and jSO, the values of control_2026_10_continuous_bounce with the population parameter taken from tuned_2026_10_subset_combined. Run with EXPERIMENT_CONTROL_SET.",
+  "procedure": {
+   "derived_from": "control_2026_10_continuous_bounce (receiver) and tuned_2026_10_subset_combined (donor): params of each block, unchanged except the population parameter",
+   "group": "population",
+   "group_meaning": "SHADE population_factor (N = round(f D)), LSHADE pop_size_factor (N_init = round(f D)), LSRTDE population_factor (N_init = round(f D)), JSO population_coefficient (N_init = round(c ln(D) sqrt(D)))",
+   "swapped_parameters": {
+    "SHADE": [
+     "population_factor"
+    ],
+    "LSHADE": [
+     "pop_size_factor"
+    ],
+    "LSRTDE": [
+     "population_factor"
+    ],
+    "JSO": [
+     "population_coefficient"
+    ]
+   },
+   "unchanged_everywhere": "every other parameter of the block (memory, archive, p-best, adaptation settings); the DE blocks take no constraint_handling_mode",
+   "values_tuned_on": "none: a recombination of two tuned configurations, not a tuned set"
+  },
+  "selection": "params = the receiver's first final elite with the donor's population parameter",
+  "fixed_settings": {
+   "values": {
+    "constraint_handling_mode": "bounce"
+   },
+   "why": "a setting no tuning run raced, written into every algorithm that takes it",
+   "not_applied": {
+    "AGOA": "the constructor refuses it (AGOA takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNDE": "the constructor refuses it (IKUNDE takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNGA": "the constructor refuses it (IKUNGA takes no parameter(s) ['constraint_handling_mode'])",
+    "JADE": "the constructor refuses it (JADE takes no parameter(s) ['constraint_handling_mode'])",
+    "JSO": "the constructor refuses it (JSO takes no parameter(s) ['constraint_handling_mode'])",
+    "LSHADE": "the constructor refuses it (LSHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "LSRTDE": "the constructor refuses it (LSRTDE takes no parameter(s) ['constraint_handling_mode'])",
+    "SHADE": "the constructor refuses it (SHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "SPSO2011": "the constructor refuses it (SPSO2011 takes no parameter(s) ['constraint_handling_mode'])"
+   }
+  }
+ },
+ "algorithms": {
+  "SHADE": {
+   "params": {
+    "population_factor": 0.207583497218352,
+    "memory_size": 90,
+    "archive_size_rate": 1.7805987418531506,
+    "p_max": 0.365374287065483
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['population_factor'] taken from tuned_2026_10_subset_combined"
+  },
+  "LSHADE": {
+   "params": {
+    "pop_size_factor": 2,
+    "memory_size": 21,
+    "p_best_rate": 0.148458827908429,
+    "archive_size_rate": 1.4592216336274246
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['pop_size_factor'] taken from tuned_2026_10_subset_combined"
+  },
+  "LSRTDE": {
+   "params": {
+    "population_factor": 2.128512404890143,
+    "memory_size": 13,
+    "sigma_f": 0.11888313743772,
+    "sigma_cr": 0.188256359869906,
+    "initial_memory_cr": 0.674465927005249
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['population_factor'] taken from tuned_2026_10_subset_combined"
+  },
+  "JSO": {
+   "params": {
+    "population_coefficient": 5.286488110694481,
+    "memory_size": 4,
+    "p_max": 0.108995530822898,
+    "archive_size_rate": 2.015193748694408,
+    "initial_memory_f": 0.446307072014717,
+    "initial_memory_cr": 0.326832073726814,
+    "fixed_memory_value": 0.52701420824809
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['population_coefficient'] taken from tuned_2026_10_subset_combined"
+  }
+ }
+}

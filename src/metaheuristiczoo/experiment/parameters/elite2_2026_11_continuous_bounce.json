@@ -1,0 +1,102 @@
+{
+ "name": "elite2_2026_11_continuous_bounce",
+ "preamble": {
+  "kind": "control",
+  "role": "control",
+  "summary": "Within-run check: for the seven algorithms of the follow-ups, the second-best final configuration of the same irace run (control_2026_10_continuous_bounce). Compared with the best one it shows how much two good configurations of one tuning run differ on the study's instances. Run with EXPERIMENT_CONTROL_SET.",
+  "procedure": {
+   "derived_from": "control_2026_10_continuous_bounce: elites[1] of each block listed under algorithms, unchanged",
+   "change": "the fixed settings of the block's params (constraint_handling_mode = bounce where the algorithm takes it) copied into the elite, so the boundary rule matches the first elite",
+   "values_tuned_on": "the 36 continuous instances of tuning set diverse-v2 (via control_2026_10_continuous_bounce) - NOT on any subset problem"
+  },
+  "selection": "params = the second final elite (irace lists the final elites best first)",
+  "fixed_settings": {
+   "values": {
+    "constraint_handling_mode": "bounce"
+   },
+   "why": "a setting no tuning run raced, written into every algorithm that takes it",
+   "not_applied": {
+    "AGOA": "the constructor refuses it (AGOA takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNDE": "the constructor refuses it (IKUNDE takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNGA": "the constructor refuses it (IKUNGA takes no parameter(s) ['constraint_handling_mode'])",
+    "JADE": "the constructor refuses it (JADE takes no parameter(s) ['constraint_handling_mode'])",
+    "JSO": "the constructor refuses it (JSO takes no parameter(s) ['constraint_handling_mode'])",
+    "LSHADE": "the constructor refuses it (LSHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "LSRTDE": "the constructor refuses it (LSRTDE takes no parameter(s) ['constraint_handling_mode'])",
+    "SHADE": "the constructor refuses it (SHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "SPSO2011": "the constructor refuses it (SPSO2011 takes no parameter(s) ['constraint_handling_mode'])"
+   }
+  }
+ },
+ "algorithms": {
+  "HybridAdditivePSO_WithWanderer": {
+   "params": {
+    "w": 0.040212038573644,
+    "c1": 1.2713364870185908,
+    "c2": 1.5398655414291649,
+    "wanderer_c": 0.121955052060532,
+    "std_cognitive_prob": 0.535176027478476,
+    "std_social_prob": 0.78231384994853,
+    "wanderer_prob": 0.082080251712904,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of control_2026_10_continuous_bounce (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridDisjointPSO_WithWanderer": {
+   "params": {
+    "w": 0.336052280183371,
+    "c1": 1.033357614705282,
+    "c2": 1.9107523917126008,
+    "wanderer_c": 0.284990878537675,
+    "wanderer_fraction": 0.066423720797717,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of control_2026_10_continuous_bounce (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridAdditivePSO_WithRandom_Var": {
+   "params": {
+    "w": 0.416905795225577,
+    "c1": 1.2975596460682364,
+    "c2": 0.918885627672898,
+    "amnesiac_c": 0.095283116374591,
+    "anarchic_c": 2.083374138708494,
+    "std_cognitive_prob": 0.553759398042843,
+    "amnesiac_prob": 0.133136529991664,
+    "std_social_prob": 0.397316191098861,
+    "anarchic_prob": 0.049625338374462,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of control_2026_10_continuous_bounce (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridPartialDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.180698399389636,
+    "c1": 0.918180926266257,
+    "c2": 1.634204847318949,
+    "amnesiac_c": 2.48496889684207,
+    "anarchic_c": 0.044330230170329,
+    "amnesiac_fraction": 0.092393443703486,
+    "anarchic_fraction": 0.033668227116713,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of control_2026_10_continuous_bounce (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "IKUNGA": {
+   "params": {
+    "crossover_probability": 0.828097560972593,
+    "sbx_distribution_index": 2.1633002291640024,
+    "mutation_distribution_index": 84.82322395840244,
+    "k": 13,
+    "crowding_weight": 0.124230889031658,
+    "window": 1,
+    "elite_size": 10,
+    "density_scale": "raw"
+   },
+   "notes": "elites[1] of control_2026_10_continuous_bounce (its second final elite), with no fixed setting(s) copied from its params"
+  }
+ }
+}

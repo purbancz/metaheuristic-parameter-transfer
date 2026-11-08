@@ -1,0 +1,156 @@
+{
+ "name": "elite2_2026_11_subset_combined",
+ "preamble": {
+  "kind": "control",
+  "role": "control",
+  "summary": "Within-run check: for the seven algorithms of the follow-ups, the second-best final configuration of the same irace run (tuned_2026_10_subset_combined). Compared with the best one it shows how much two good configurations of one tuning run differ on the study's instances. Run with EXPERIMENT_CONTROL_SET.",
+  "procedure": {
+   "derived_from": "tuned_2026_10_subset_combined: elites[1] of each block listed under algorithms, unchanged",
+   "change": "the fixed settings of the block's params (constraint_handling_mode = bounce where the algorithm takes it) copied into the elite, so the boundary rule matches the first elite",
+   "values_tuned_on": "Stage 1's pooled race on 7 p-median + 7 p-center instances (subset problems)"
+  },
+  "selection": "params = the second final elite (irace lists the final elites best first)",
+  "fixed_settings": {
+   "values": {
+    "constraint_handling_mode": "bounce"
+   },
+   "why": "a setting no tuning run raced, written into every algorithm that takes it",
+   "not_applied": {
+    "AGOA": "the constructor refuses it (AGOA takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNDE": "the constructor refuses it (IKUNDE takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNGA": "the constructor refuses it (IKUNGA takes no parameter(s) ['constraint_handling_mode'])",
+    "JADE": "the constructor refuses it (JADE takes no parameter(s) ['constraint_handling_mode'])",
+    "JSO": "the constructor refuses it (JSO takes no parameter(s) ['constraint_handling_mode'])",
+    "LSHADE": "the constructor refuses it (LSHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "LSRTDE": "the constructor refuses it (LSRTDE takes no parameter(s) ['constraint_handling_mode'])",
+    "SHADE": "the constructor refuses it (SHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "SPSO2011": "the constructor refuses it (SPSO2011 takes no parameter(s) ['constraint_handling_mode'])"
+   }
+  }
+ },
+ "algorithms": {
+  "HybridAdditivePSO_WithWanderer": {
+   "params": {
+    "w": 0.341109891064616,
+    "c1": 2.287446253688319,
+    "c2": 3.472673423586284,
+    "wanderer_c": 5.610769519289457,
+    "std_cognitive_prob": 0.798625395014353,
+    "std_social_prob": 0.546805448206206,
+    "wanderer_prob": 0.025424680700666,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridDisjointPSO_WithWanderer": {
+   "params": {
+    "w": 0.637880995435287,
+    "c1": 1.1973679993224533,
+    "c2": 3.1680160180277177,
+    "wanderer_c": 3.626875301528292,
+    "wanderer_fraction": 0.017556532393461,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridAdditivePSO_WithRandom_Var": {
+   "params": {
+    "w": 0.504154647713812,
+    "c1": 1.1283884183508581,
+    "c2": 3.267934005591226,
+    "amnesiac_c": 3.658327195250047,
+    "anarchic_c": 1.6531531047769457,
+    "std_cognitive_prob": 0.033639721955272,
+    "amnesiac_prob": 0.062883401693752,
+    "std_social_prob": 0.61806874839384,
+    "anarchic_prob": 0.025010540408848,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridPartialDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.200487234615626,
+    "c1": 0.789094613141034,
+    "c2": 0.640895525783635,
+    "amnesiac_c": 5.640765366468865,
+    "anarchic_c": 0.089931664039862,
+    "amnesiac_fraction": 0.100033759075803,
+    "anarchic_fraction": 0.626910381697218,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridAdditivePSO_WithRandom": {
+   "params": {
+    "w": 0.18458129149599,
+    "c1": 2.8145584678651505,
+    "c2": 3.1782264012957215,
+    "rejector_c": 0.615810890426759,
+    "defeatist_c": 3.003726685271338,
+    "escapist_c": 0.702584727633725,
+    "amnesiac_c": 3.2718193401290994,
+    "rebel_c": 1.5253066618104925,
+    "contrarian_c": 4.832455292892536,
+    "eschewer_c": 4.217266941487986,
+    "anarchic_c": 3.4681262327678564,
+    "std_cognitive_prob": 0.473919606977089,
+    "rejector_prob": 0.325115394252001,
+    "defeatist_prob": 0.166454820296894,
+    "escapist_prob": 0.752291868560589,
+    "amnesiac_prob": 0.711972603975814,
+    "std_social_prob": 0.173721550992873,
+    "rebel_prob": 0.30593209319783,
+    "contrarian_prob": 0.580751101140705,
+    "eschewer_prob": 0.396487858954567,
+    "anarchic_prob": 0.831819177179167,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "HybridPartialDisjointPSO_WithRandom": {
+   "params": {
+    "w": 0.486387838451086,
+    "c1": 1.022375049514961,
+    "c2": 3.0388580759681494,
+    "rejector_c": 5.235674414468031,
+    "defeatist_c": 5.922377315396072,
+    "escapist_c": 0.987971959071535,
+    "amnesiac_c": 5.280269790004898,
+    "rebel_c": 1.2106257100679039,
+    "contrarian_c": 5.632897201416727,
+    "eschewer_c": 4.325414738020917,
+    "anarchic_c": 2.876586962276504,
+    "rejector_fraction": 0.09778417730451748,
+    "defeatist_fraction": 0.3612452598852158,
+    "escapist_fraction": 0.24788790765847538,
+    "amnesiac_fraction": 0.29308265515179155,
+    "rebel_fraction": 0.3748592537399281,
+    "contrarian_fraction": 0.26569226356036874,
+    "eschewer_fraction": 0.1925108437248821,
+    "anarchic_fraction": 0.16693763897482095,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with ['constraint_handling_mode'] fixed setting(s) copied from its params"
+  },
+  "IKUNGA": {
+   "params": {
+    "crossover_probability": 0.995440889326686,
+    "sbx_distribution_index": 2.9038420372226006,
+    "mutation_distribution_index": 10.699626852735339,
+    "k": 10,
+    "crowding_weight": 0.014152678832468,
+    "window": 1,
+    "elite_size": 6,
+    "density_scale": "relative"
+   },
+   "notes": "elites[1] of tuned_2026_10_subset_combined (its second final elite), with no fixed setting(s) copied from its params"
+  }
+ }
+}

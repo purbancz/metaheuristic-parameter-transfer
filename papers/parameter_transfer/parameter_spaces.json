@@ -1,0 +1,1693 @@
+{
+ "note": "the irace parameter spaces of the 25 algorithms, as the tuning runs used them; read by papers/parameter_transfer/analysis.py for the parameter ranges",
+ "algorithms": {
+  "PSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   }
+  ],
+  "RebelRejectorPSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "ac1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "ac2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rejector_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   }
+  ],
+  "ContrarianDefeatistPSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "ac1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "ac2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   }
+  ],
+  "EschewerEscapistPSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "ac1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "ac2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   }
+  ],
+  "HybridFullDisjointPSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "defeatist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "escapist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rebel_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "contrarian_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "eschewer_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridPartialDisjointPSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "defeatist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "escapist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rebel_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "contrarian_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "eschewer_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridAdditivePSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "defeatist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "escapist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "std_cognitive_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rejector_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "std_social_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rebel_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "contrarian_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "eschewer_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_flags_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridDisjointPSO_WithWanderer": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "wanderer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "wanderer_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridAdditivePSO_WithWanderer": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "wanderer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "std_cognitive_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "std_social_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "wanderer_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_flags_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridFullDisjointPSO_WithRandom": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "defeatist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "escapist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "anarchic_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "amnesiac_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rebel_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "contrarian_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "eschewer_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "anarchic_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridPartialDisjointPSO_WithRandom": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "defeatist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "escapist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "anarchic_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "amnesiac_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rebel_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "contrarian_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "eschewer_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "anarchic_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridAdditivePSO_WithRandom": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rejector_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "defeatist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "escapist_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "rebel_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "contrarian_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "eschewer_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "anarchic_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "std_cognitive_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rejector_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "defeatist_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "escapist_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "amnesiac_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "std_social_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "rebel_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "contrarian_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "eschewer_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "anarchic_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_flags_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridFullDisjointPSO_WithRandom_Var": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "anarchic_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "anarchic_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridPartialDisjointPSO_WithRandom_Var": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "anarchic_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "anarchic_fraction",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_roles_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "HybridAdditivePSO_WithRandom_Var": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "amnesiac_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "anarchic_c",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "std_cognitive_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "amnesiac_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "std_social_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "anarchic_prob",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.99,
+    "log": false
+   },
+   {
+    "name": "assign_flags_every_iteration",
+    "type": "Bool",
+    "values": [
+     false,
+     true
+    ]
+   }
+  ],
+  "LSHADE": [
+   {
+    "name": "pop_size_factor",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 30,
+    "log": false
+   },
+   {
+    "name": "memory_size",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 50,
+    "log": false
+   },
+   {
+    "name": "p_best_rate",
+    "type": "Real",
+    "lower": 0.05,
+    "upper": 0.25,
+    "log": false
+   },
+   {
+    "name": "archive_size_rate",
+    "type": "Real",
+    "lower": 1.0,
+    "upper": 4.0,
+    "log": false
+   }
+  ],
+  "SPSO2011": [
+   {
+    "name": "swarm_size",
+    "type": "Integer",
+    "lower": 10,
+    "upper": 200,
+    "log": false
+   },
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 3.0,
+    "log": false
+   },
+   {
+    "name": "k",
+    "type": "Integer",
+    "lower": 1,
+    "upper": 10,
+    "log": false
+   }
+  ],
+  "SHADE": [
+   {
+    "name": "population_factor",
+    "type": "Real",
+    "lower": 0.2,
+    "upper": 5.0,
+    "log": false
+   },
+   {
+    "name": "memory_size",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 100,
+    "log": false
+   },
+   {
+    "name": "archive_size_rate",
+    "type": "Real",
+    "lower": 0.5,
+    "upper": 3.0,
+    "log": false
+   },
+   {
+    "name": "p_max",
+    "type": "Real",
+    "lower": 0.05,
+    "upper": 0.5,
+    "log": false
+   }
+  ],
+  "JSO": [
+   {
+    "name": "population_coefficient",
+    "type": "Real",
+    "lower": 5.0,
+    "upper": 50.0,
+    "log": false
+   },
+   {
+    "name": "memory_size",
+    "type": "Integer",
+    "lower": 3,
+    "upper": 10,
+    "log": false
+   },
+   {
+    "name": "p_max",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 0.4,
+    "log": false
+   },
+   {
+    "name": "archive_size_rate",
+    "type": "Real",
+    "lower": 0.5,
+    "upper": 3.0,
+    "log": false
+   },
+   {
+    "name": "initial_memory_f",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 0.9,
+    "log": false
+   },
+   {
+    "name": "initial_memory_cr",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 0.9,
+    "log": false
+   },
+   {
+    "name": "fixed_memory_value",
+    "type": "Real",
+    "lower": 0.5,
+    "upper": 1.0,
+    "log": false
+   }
+  ],
+  "LSRTDE": [
+   {
+    "name": "population_factor",
+    "type": "Real",
+    "lower": 2.0,
+    "upper": 40.0,
+    "log": false
+   },
+   {
+    "name": "memory_size",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 20,
+    "log": false
+   },
+   {
+    "name": "sigma_f",
+    "type": "Real",
+    "lower": 0.005,
+    "upper": 0.2,
+    "log": false
+   },
+   {
+    "name": "sigma_cr",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.3,
+    "log": false
+   },
+   {
+    "name": "initial_memory_cr",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 1.0,
+    "log": false
+   }
+  ],
+  "AGOA": [
+   {
+    "name": "elite_reinforcement",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "defensive_counterattack",
+    "type": "Real",
+    "lower": 0.0,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "cooperation_probability",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "scaling_factor",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 1.5,
+    "log": false
+   },
+   {
+    "name": "chaos_factor",
+    "type": "Real",
+    "lower": 0.0,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "diversity_threshold",
+    "type": "Real",
+    "lower": 0.005,
+    "upper": 0.3,
+    "log": true
+   },
+   {
+    "name": "stagnation_limit",
+    "type": "Integer",
+    "lower": 10,
+    "upper": 500,
+    "log": true
+   }
+  ],
+  "JADE": [
+   {
+    "name": "p_best_rate",
+    "type": "Real",
+    "lower": 0.02,
+    "upper": 0.3,
+    "log": false
+   },
+   {
+    "name": "adaptation_rate",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 0.5,
+    "log": true
+   },
+   {
+    "name": "archive_rate",
+    "type": "Real",
+    "lower": 0.0,
+    "upper": 3.0,
+    "log": false
+   }
+  ],
+  "IKUNPSO": [
+   {
+    "name": "w",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "c1",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "c2",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 6.0,
+    "log": false
+   },
+   {
+    "name": "k",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 15,
+    "log": false
+   },
+   {
+    "name": "crowding_weight",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.5,
+    "log": true
+   },
+   {
+    "name": "window",
+    "type": "Integer",
+    "lower": 1,
+    "upper": 10,
+    "log": false
+   },
+   {
+    "name": "repulsion_coefficient",
+    "type": "Real",
+    "lower": 0.0,
+    "upper": 2.0,
+    "log": false
+   },
+   {
+    "name": "density_scale",
+    "type": "Categorical",
+    "values": [
+     "raw",
+     "relative"
+    ]
+   }
+  ],
+  "IKUNDE": [
+   {
+    "name": "CR",
+    "type": "Real",
+    "lower": 0.0,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "F",
+    "type": "Real",
+    "lower": 0.1,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "k",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 15,
+    "log": false
+   },
+   {
+    "name": "crowding_weight",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.5,
+    "log": true
+   },
+   {
+    "name": "window",
+    "type": "Integer",
+    "lower": 1,
+    "upper": 10,
+    "log": false
+   },
+   {
+    "name": "density_scale",
+    "type": "Categorical",
+    "values": [
+     "raw",
+     "relative"
+    ]
+   }
+  ],
+  "IKUNGA": [
+   {
+    "name": "crossover_probability",
+    "type": "Real",
+    "lower": 0.6,
+    "upper": 1.0,
+    "log": false
+   },
+   {
+    "name": "sbx_distribution_index",
+    "type": "Real",
+    "lower": 2.0,
+    "upper": 30.0,
+    "log": true
+   },
+   {
+    "name": "mutation_distribution_index",
+    "type": "Real",
+    "lower": 5.0,
+    "upper": 100.0,
+    "log": true
+   },
+   {
+    "name": "k",
+    "type": "Integer",
+    "lower": 2,
+    "upper": 15,
+    "log": false
+   },
+   {
+    "name": "crowding_weight",
+    "type": "Real",
+    "lower": 0.01,
+    "upper": 1.5,
+    "log": true
+   },
+   {
+    "name": "window",
+    "type": "Integer",
+    "lower": 1,
+    "upper": 10,
+    "log": false
+   },
+   {
+    "name": "elite_size",
+    "type": "Integer",
+    "lower": 0,
+    "upper": 10,
+    "log": false
+   },
+   {
+    "name": "density_scale",
+    "type": "Categorical",
+    "values": [
+     "raw",
+     "relative"
+    ]
+   }
+  ]
+ }
+}

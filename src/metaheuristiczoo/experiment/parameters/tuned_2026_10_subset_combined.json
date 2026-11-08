@@ -1,0 +1,387 @@
+{
+ "name": "tuned_2026_10_subset_combined",
+ "preamble": {
+  "kind": "irace",
+  "summary": "Configuration S of the study: one irace run per algorithm on 14 subset-selection instances, seven OR-Library graphs each as a p-median and a p-center problem (October 2026).",
+  "procedure": {
+   "tuner": "irace (R package) 4.5, driven from Python through iracepy-tiny and rpy2",
+   "instances": "OR-Library pmed1, 6, 11, 21, 31, 38, 39 (Beasley, J. Oper. Res. Soc. 41(11) 1990, 1069-1072), n = 100, 200, 300, 500, 700, 900, 900 with p = 5 except pmed39 (p = 10), each as p-median and as p-center = 14 instances, interleaved so that each irace block is one graph under both objectives",
+   "evaluations_per_run": "clamp(20 p (n - p), 5000, 200000) = 9500, 19500, 29500, 49500, 69500, 89500, 178000",
+   "population": 100,
+   "runs_per_experiment": 1,
+   "experiment_cost": "best objective of one seeded run of one configuration on one instance",
+   "budget": "1000 sqrt(k) experiments per algorithm, k = number of tuned parameters",
+   "irace_options": "blockSize 2 (one block = one graph under both objectives), mu 2, firstTest 1, eachTest 1, sampleInstances FALSE; racing seed 42",
+   "representation": "x in [0,1]^n decoded to a subset by TopKDecoder with the 'index' tie rule",
+   "fixed_settings": "constraint_handling_mode = bounce (reflection at the bounds), applied at evaluation time"
+  },
+  "selection": "params = the best final configuration of each irace run (its first final elite)",
+  "fixed_settings": {
+   "values": {
+    "constraint_handling_mode": "bounce"
+   },
+   "why": "a setting no tuning run raced, written into every algorithm that takes it",
+   "not_applied": {
+    "AGOA": "the constructor refuses it (AGOA takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNDE": "the constructor refuses it (IKUNDE takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNGA": "the constructor refuses it (IKUNGA takes no parameter(s) ['constraint_handling_mode'])",
+    "JADE": "the constructor refuses it (JADE takes no parameter(s) ['constraint_handling_mode'])",
+    "JSO": "the constructor refuses it (JSO takes no parameter(s) ['constraint_handling_mode'])",
+    "LSHADE": "the constructor refuses it (LSHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "LSRTDE": "the constructor refuses it (LSRTDE takes no parameter(s) ['constraint_handling_mode'])",
+    "SHADE": "the constructor refuses it (SHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "SPSO2011": "the constructor refuses it (SPSO2011 takes no parameter(s) ['constraint_handling_mode'])"
+   }
+  }
+ },
+ "algorithms": {
+  "AGOA": {
+   "params": {
+    "elite_reinforcement": 0.233897953610935,
+    "defensive_counterattack": 0.509740028299305,
+    "cooperation_probability": 0.553387513136054,
+    "scaling_factor": 0.127047258664909,
+    "chaos_factor": 0.773329180835075,
+    "diversity_threshold": 0.021040516155395,
+    "stagnation_limit": 348
+   }
+  },
+  "ContrarianDefeatistPSO": {
+   "params": {
+    "w": 0.780791801103662,
+    "c1": 0.968540116868569,
+    "c2": 3.1518894643885345,
+    "ac1": 0.810303219096477,
+    "ac2": 0.824906648412074,
+    "contrarian_fraction": 0.236373287816994,
+    "defeatist_fraction": 0.416056917851101,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "EschewerEscapistPSO": {
+   "params": {
+    "w": 0.69894737093719,
+    "c1": 2.3380790349133798,
+    "c2": 1.9007381415723206,
+    "ac1": 5.840728531877663,
+    "ac2": 2.343447246800438,
+    "eschewer_fraction": 0.112589495543475,
+    "escapist_fraction": 0.196893014187115,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO": {
+   "params": {
+    "w": 0.526729283319644,
+    "c1": 3.5343966095238204,
+    "c2": 0.51065107394291,
+    "rejector_c": 1.0036640689947933,
+    "defeatist_c": 0.895222003204123,
+    "escapist_c": 0.549181288912493,
+    "rebel_c": 0.06420398173005,
+    "contrarian_c": 2.0130414781108144,
+    "eschewer_c": 2.42668775951955,
+    "std_cognitive_prob": 0.906563801849948,
+    "rejector_prob": 0.451675215029672,
+    "defeatist_prob": 0.178697601852045,
+    "escapist_prob": 0.137664173055661,
+    "std_social_prob": 0.773634104294433,
+    "rebel_prob": 0.84551581774538,
+    "contrarian_prob": 0.061541666306852,
+    "eschewer_prob": 0.028235249303426,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO_WithRandom": {
+   "params": {
+    "w": 0.278033460748667,
+    "c1": 4.481387327807766,
+    "c2": 5.243525580542122,
+    "rejector_c": 2.5907360842212737,
+    "defeatist_c": 3.7902022357421483,
+    "escapist_c": 1.1520234776411988,
+    "amnesiac_c": 2.215930395810847,
+    "rebel_c": 1.8213195331244743,
+    "contrarian_c": 4.844515007869018,
+    "eschewer_c": 1.0416909972501003,
+    "anarchic_c": 1.4150098941918268,
+    "std_cognitive_prob": 0.351826114887481,
+    "rejector_prob": 0.452405647625219,
+    "defeatist_prob": 0.180828029533284,
+    "escapist_prob": 0.845550063504212,
+    "amnesiac_prob": 0.469953692218321,
+    "std_social_prob": 0.152759801175469,
+    "rebel_prob": 0.975270200325715,
+    "contrarian_prob": 0.529851727708363,
+    "eschewer_prob": 0.713953214360359,
+    "anarchic_prob": 0.095810294155016,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO_WithRandom_Var": {
+   "params": {
+    "w": 0.651553255080255,
+    "c1": 1.59177344573173,
+    "c2": 2.884257343360388,
+    "amnesiac_c": 4.495903158413143,
+    "anarchic_c": 1.4258380505497725,
+    "std_cognitive_prob": 0.164844965499127,
+    "amnesiac_prob": 0.024245232114697,
+    "std_social_prob": 0.579172709620607,
+    "anarchic_prob": 0.058257199815747,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO_WithWanderer": {
+   "params": {
+    "w": 0.437341364282388,
+    "c1": 1.8460220932644484,
+    "c2": 3.7513047551832583,
+    "wanderer_c": 5.24338543666626,
+    "std_cognitive_prob": 0.961106094759666,
+    "std_social_prob": 0.604483517816746,
+    "wanderer_prob": 0.019806415032645,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridDisjointPSO_WithWanderer": {
+   "params": {
+    "w": 0.651779436530863,
+    "c1": 0.758084896912408,
+    "c2": 3.4205076737818163,
+    "wanderer_c": 3.3512297180191353,
+    "wanderer_fraction": 0.019374866976544,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridFullDisjointPSO": {
+   "params": {
+    "w": 0.669764923998006,
+    "c1": 2.1062663460441207,
+    "c2": 1.9943640540975491,
+    "rejector_c": 1.8248683576983447,
+    "defeatist_c": 0.540529915225996,
+    "escapist_c": 5.591499988386856,
+    "rebel_c": 1.3731867962262072,
+    "contrarian_c": 0.250733327815558,
+    "eschewer_c": 3.571093207939962,
+    "rejector_fraction": 0.11963091027582168,
+    "defeatist_fraction": 0.3093956743046603,
+    "escapist_fraction": 0.007093017327885856,
+    "rebel_fraction": 0.1936984405834901,
+    "contrarian_fraction": 0.351359940590809,
+    "eschewer_fraction": 0.018822016917333182,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridFullDisjointPSO_WithRandom": {
+   "params": {
+    "w": 0.286468594982482,
+    "c1": 2.032672436006483,
+    "c2": 2.7372997695635823,
+    "rejector_c": 5.036640890259174,
+    "defeatist_c": 0.326264946994037,
+    "escapist_c": 0.610034278272379,
+    "amnesiac_c": 0.012863163926115,
+    "rebel_c": 3.8730429077890656,
+    "contrarian_c": 1.169160265576173,
+    "eschewer_c": 0.805017041555953,
+    "anarchic_c": 0.144938585497969,
+    "rejector_fraction": 0.18027723235964035,
+    "defeatist_fraction": 0.0909569043733105,
+    "escapist_fraction": 0.1607922708781592,
+    "amnesiac_fraction": 0.05214289220858227,
+    "rebel_fraction": 0.012077991364171752,
+    "contrarian_fraction": 0.20871065161237934,
+    "eschewer_fraction": 0.12411434403211122,
+    "anarchic_fraction": 0.17092771317164532,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridFullDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.401212432110664,
+    "c1": 3.5546326358506204,
+    "c2": 1.0437372432833556,
+    "amnesiac_c": 0.826995255036785,
+    "anarchic_c": 2.1185575107370616,
+    "amnesiac_fraction": 0.083154453582182,
+    "anarchic_fraction": 0.042657948332381,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridPartialDisjointPSO": {
+   "params": {
+    "w": 0.045640210220352,
+    "c1": 2.205881602560992,
+    "c2": 1.967417148508796,
+    "rejector_c": 4.274512398094142,
+    "defeatist_c": 1.8907357652291548,
+    "escapist_c": 3.2286862488732355,
+    "rebel_c": 0.359851914674571,
+    "contrarian_c": 0.661976797010845,
+    "eschewer_c": 3.5091809798744773,
+    "rejector_fraction": 0.076806228180973,
+    "defeatist_fraction": 0.028595752899162,
+    "escapist_fraction": 0.0169728665657,
+    "rebel_fraction": 0.357914003864872,
+    "contrarian_fraction": 0.315235848092202,
+    "eschewer_fraction": 0.08029061766443,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridPartialDisjointPSO_WithRandom": {
+   "params": {
+    "w": 0.592396363616368,
+    "c1": 0.886205953968615,
+    "c2": 3.454584249701605,
+    "rejector_c": 5.202400117019911,
+    "defeatist_c": 4.129310420523269,
+    "escapist_c": 0.238750818385705,
+    "amnesiac_c": 5.695710075063169,
+    "rebel_c": 0.797253617161369,
+    "contrarian_c": 4.893448972171912,
+    "eschewer_c": 3.2103828950728652,
+    "anarchic_c": 2.436185557233299,
+    "rejector_fraction": 0.14514964779685544,
+    "defeatist_fraction": 0.19402888350093614,
+    "escapist_fraction": 0.2561837710330969,
+    "amnesiac_fraction": 0.4046376976691116,
+    "rebel_fraction": 0.35710397932881965,
+    "contrarian_fraction": 0.28701180127717546,
+    "eschewer_fraction": 0.20033378873801713,
+    "anarchic_fraction": 0.15555043065598767,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridPartialDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.237277023706902,
+    "c1": 0.762967822231035,
+    "c2": 0.473517230770953,
+    "amnesiac_c": 5.909991953032761,
+    "anarchic_c": 0.068456806730103,
+    "amnesiac_fraction": 0.16738842879988,
+    "anarchic_fraction": 0.652709956640368,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "IKUNDE": {
+   "params": {
+    "CR": 0.168250401054091,
+    "F": 0.109716006140992,
+    "k": 14,
+    "crowding_weight": 0.098377106524896,
+    "window": 8,
+    "density_scale": "raw"
+   }
+  },
+  "IKUNGA": {
+   "params": {
+    "crossover_probability": 0.972704524202105,
+    "sbx_distribution_index": 3.0259120226946075,
+    "mutation_distribution_index": 16.797950021342416,
+    "k": 12,
+    "crowding_weight": 0.012417980854679,
+    "window": 1,
+    "elite_size": 5,
+    "density_scale": "relative"
+   }
+  },
+  "IKUNPSO": {
+   "params": {
+    "w": 0.704432816132343,
+    "c1": 2.4613552226098947,
+    "c2": 1.9235289135487417,
+    "k": 7,
+    "crowding_weight": 0.398062660510416,
+    "window": 4,
+    "repulsion_coefficient": 0.662193165801173,
+    "density_scale": "relative",
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "JADE": {
+   "params": {
+    "p_best_rate": 0.121969855510901,
+    "adaptation_rate": 0.014820239384263,
+    "archive_rate": 1.9901481081569419
+   }
+  },
+  "JSO": {
+   "params": {
+    "population_coefficient": 5.286488110694481,
+    "memory_size": 8,
+    "p_max": 0.195116960043897,
+    "archive_size_rate": 1.6826130707503049,
+    "initial_memory_f": 0.718035180429326,
+    "initial_memory_cr": 0.285857256807374,
+    "fixed_memory_value": 0.513973281164964
+   }
+  },
+  "LSHADE": {
+   "params": {
+    "pop_size_factor": 2,
+    "memory_size": 44,
+    "p_best_rate": 0.102312859764303,
+    "archive_size_rate": 2.059618842281432
+   }
+  },
+  "LSRTDE": {
+   "params": {
+    "population_factor": 2.128512404890143,
+    "memory_size": 13,
+    "sigma_f": 0.007928405215619,
+    "sigma_cr": 0.15404837518428,
+    "initial_memory_cr": 0.875232779127476
+   }
+  },
+  "PSO": {
+   "params": {
+    "w": 0.890473468960094,
+    "c1": 2.9270508760260485,
+    "c2": 0.613294971238774,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "RebelRejectorPSO": {
+   "params": {
+    "w": 0.498503682210908,
+    "c1": 2.5700803293089827,
+    "c2": 2.414460736912088,
+    "ac1": 2.051048435534807,
+    "ac2": 1.7058231816792737,
+    "rebel_fraction": 0.120480796212519,
+    "rejector_fraction": 0.261867768082377,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "SHADE": {
+   "params": {
+    "population_factor": 0.207583497218352,
+    "memory_size": 12,
+    "archive_size_rate": 2.6657095246740514,
+    "p_max": 0.075713456464992
+   }
+  },
+  "SPSO2011": {
+   "params": {
+    "swarm_size": 145,
+    "w": 0.774195518825499,
+    "c": 0.924924210432826,
+    "k": 8
+   }
+  }
+ }
+}

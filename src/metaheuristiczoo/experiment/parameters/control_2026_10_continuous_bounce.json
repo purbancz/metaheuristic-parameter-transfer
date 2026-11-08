@@ -1,0 +1,381 @@
+{
+ "name": "control_2026_10_continuous_bounce",
+ "preamble": {
+  "kind": "control",
+  "role": "control",
+  "summary": "Configuration C of the study: the values of tuned_2026_10_diverse_v2 (tuning set 'diverse-v2', continuous benchmarks) with constraint_handling_mode = bounce written in, so that S and C use the same boundary handling on the subset instances. Run with EXPERIMENT_CONTROL_SET.",
+  "procedure": {
+   "derived_from": "tuned_2026_10_diverse_v2: every algorithm's params copied unchanged",
+   "change": "constraint_handling_mode = bounce written into every algorithm that takes it; the others keep their own boundary handling, as in S",
+   "values_tuned_on": "the 36 continuous instances of tuning set diverse-v2, not on any subset problem"
+  },
+  "selection": "params = the first final elite of the block (irace lists the final elites best first), stored as the tuner evaluated it (repaired and normalised)",
+  "fixed_settings": {
+   "values": {
+    "constraint_handling_mode": "bounce"
+   },
+   "why": "a setting no tuning run raced, written into every algorithm that takes it",
+   "not_applied": {
+    "AGOA": "the constructor refuses it (AGOA takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNDE": "the constructor refuses it (IKUNDE takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNGA": "the constructor refuses it (IKUNGA takes no parameter(s) ['constraint_handling_mode'])",
+    "JADE": "the constructor refuses it (JADE takes no parameter(s) ['constraint_handling_mode'])",
+    "JSO": "the constructor refuses it (JSO takes no parameter(s) ['constraint_handling_mode'])",
+    "LSHADE": "the constructor refuses it (LSHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "LSRTDE": "the constructor refuses it (LSRTDE takes no parameter(s) ['constraint_handling_mode'])",
+    "SHADE": "the constructor refuses it (SHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "SPSO2011": "the constructor refuses it (SPSO2011 takes no parameter(s) ['constraint_handling_mode'])"
+   }
+  }
+ },
+ "algorithms": {
+  "AGOA": {
+   "params": {
+    "elite_reinforcement": 0.012438483379779,
+    "defensive_counterattack": 0.910937675752995,
+    "cooperation_probability": 0.957691539276944,
+    "scaling_factor": 0.629757558612265,
+    "chaos_factor": 0.552907819808843,
+    "diversity_threshold": 0.005492554065039,
+    "stagnation_limit": 17
+   }
+  },
+  "ContrarianDefeatistPSO": {
+   "params": {
+    "w": 0.334638721163671,
+    "c1": 2.581584110038693,
+    "c2": 2.5835233241878295,
+    "ac1": 1.5360363948968467,
+    "ac2": 2.560194498188195,
+    "contrarian_fraction": 0.015748177019559,
+    "defeatist_fraction": 0.116539130193346,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "EschewerEscapistPSO": {
+   "params": {
+    "w": 0.673224045487501,
+    "c1": 3.4143840354290473,
+    "c2": 1.105293558119826,
+    "ac1": 0.505722006457149,
+    "ac2": 0.69053478971813,
+    "eschewer_fraction": 0.23036353472421,
+    "escapist_fraction": 0.220761728277444,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO": {
+   "params": {
+    "w": 0.050226282395416,
+    "c1": 3.3989951673819814,
+    "c2": 2.5104848200013223,
+    "rejector_c": 0.506866130897818,
+    "defeatist_c": 2.160636111241997,
+    "escapist_c": 3.0536639494728184,
+    "rebel_c": 3.4915217741052524,
+    "contrarian_c": 0.055539139420303,
+    "eschewer_c": 1.9220603899811506,
+    "std_cognitive_prob": 0.622104395306831,
+    "rejector_prob": 0.802759194939101,
+    "defeatist_prob": 0.018218156064382,
+    "escapist_prob": 0.097923284403949,
+    "std_social_prob": 0.567918399791636,
+    "rebel_prob": 0.598566033644691,
+    "contrarian_prob": 0.090796959130816,
+    "eschewer_prob": 0.021309270429985,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO_WithRandom": {
+   "params": {
+    "w": 0.068965465946523,
+    "c1": 0.699190184080109,
+    "c2": 1.61635160956244,
+    "rejector_c": 0.371242676141806,
+    "defeatist_c": 1.1206536448720072,
+    "escapist_c": 3.795129854159322,
+    "amnesiac_c": 3.04802730395987,
+    "rebel_c": 0.747856719714708,
+    "contrarian_c": 1.8270509751725876,
+    "eschewer_c": 4.985186966326486,
+    "anarchic_c": 2.752495893970153,
+    "std_cognitive_prob": 0.80999796664055,
+    "rejector_prob": 0.282684140146158,
+    "defeatist_prob": 0.041474556985266,
+    "escapist_prob": 0.192822538903934,
+    "amnesiac_prob": 0.058395047078659,
+    "std_social_prob": 0.620937521243569,
+    "rebel_prob": 0.302871830912933,
+    "contrarian_prob": 0.024001065996271,
+    "eschewer_prob": 0.046808409324421,
+    "anarchic_prob": 0.284568856962224,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO_WithRandom_Var": {
+   "params": {
+    "w": 0.10624231216119,
+    "c1": 0.519752656107772,
+    "c2": 1.7889290816475494,
+    "amnesiac_c": 0.804999796408553,
+    "anarchic_c": 0.536753069804812,
+    "std_cognitive_prob": 0.44970884585493,
+    "amnesiac_prob": 0.049026948668944,
+    "std_social_prob": 0.61214834743763,
+    "anarchic_prob": 0.019560972160974,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridAdditivePSO_WithWanderer": {
+   "params": {
+    "w": 0.073978453040201,
+    "c1": 1.286188972139193,
+    "c2": 1.7314926594329667,
+    "wanderer_c": 2.4478527881448517,
+    "std_cognitive_prob": 0.338062934253344,
+    "std_social_prob": 0.892109911794869,
+    "wanderer_prob": 0.087573888539645,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridDisjointPSO_WithWanderer": {
+   "params": {
+    "w": 0.242158894076916,
+    "c1": 1.2624036173027713,
+    "c2": 1.6339878241807324,
+    "wanderer_c": 0.180485661589188,
+    "wanderer_fraction": 0.09451461458033,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridFullDisjointPSO": {
+   "params": {
+    "w": 0.229992174413275,
+    "c1": 3.284694396259665,
+    "c2": 3.9214405915161294,
+    "rejector_c": 0.361352317029691,
+    "defeatist_c": 0.307579738308226,
+    "escapist_c": 0.423561072729792,
+    "rebel_c": 2.138815186491224,
+    "contrarian_c": 0.017452767559977,
+    "eschewer_c": 3.215645378389036,
+    "rejector_fraction": 0.34510633947101244,
+    "defeatist_fraction": 0.022319424305730366,
+    "escapist_fraction": 0.16741341914877161,
+    "rebel_fraction": 0.19174735337624724,
+    "contrarian_fraction": 0.2591403020042395,
+    "eschewer_fraction": 0.014273161693998794,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridFullDisjointPSO_WithRandom": {
+   "params": {
+    "w": 0.048174939758339,
+    "c1": 2.058105489121952,
+    "c2": 1.5121271684315452,
+    "rejector_c": 0.094944873635845,
+    "defeatist_c": 1.8896456533092498,
+    "escapist_c": 5.7217195984697735,
+    "amnesiac_c": 2.502788850693466,
+    "rebel_c": 2.0989643706310543,
+    "contrarian_c": 5.099515264565749,
+    "eschewer_c": 3.127153856729379,
+    "anarchic_c": 0.016588760634534,
+    "rejector_fraction": 0.29565983603238766,
+    "defeatist_fraction": 0.022120474753682024,
+    "escapist_fraction": 0.01368520803556722,
+    "amnesiac_fraction": 0.08574116515985138,
+    "rebel_fraction": 0.23452879126107168,
+    "contrarian_fraction": 0.0646725653124506,
+    "eschewer_fraction": 0.05154567873197633,
+    "anarchic_fraction": 0.2320462807130131,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridFullDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.243214054716125,
+    "c1": 2.224305566906332,
+    "c2": 1.0587573724856447,
+    "amnesiac_c": 1.9658127664853304,
+    "anarchic_c": 0.29963499652274,
+    "amnesiac_fraction": 0.05294262284817,
+    "anarchic_fraction": 0.048057978496412,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridPartialDisjointPSO": {
+   "params": {
+    "w": 0.322047118718312,
+    "c1": 2.665542323550691,
+    "c2": 2.403830267474782,
+    "rejector_c": 0.334689198462474,
+    "defeatist_c": 1.0216189278435608,
+    "escapist_c": 3.355818544695769,
+    "rebel_c": 2.182328239746271,
+    "contrarian_c": 0.046982792762945,
+    "eschewer_c": 0.108295394082361,
+    "rejector_fraction": 0.620419793098238,
+    "defeatist_fraction": 0.099101739289632,
+    "escapist_fraction": 0.059116721015217,
+    "rebel_fraction": 0.07838385760826,
+    "contrarian_fraction": 0.076222990306648,
+    "eschewer_fraction": 0.025742383084867,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridPartialDisjointPSO_WithRandom": {
+   "params": {
+    "w": 0.025667557482219,
+    "c1": 1.2215818488159096,
+    "c2": 1.9098038305010736,
+    "rejector_c": 1.2534484060734707,
+    "defeatist_c": 2.9359858759304616,
+    "escapist_c": 0.021613719668271,
+    "amnesiac_c": 2.9353363539078576,
+    "rebel_c": 1.9574519426782049,
+    "contrarian_c": 2.351439451643151,
+    "eschewer_c": 3.066099982432391,
+    "anarchic_c": 0.81905025039418,
+    "rejector_fraction": 0.22309846603914416,
+    "defeatist_fraction": 0.08956048185492618,
+    "escapist_fraction": 0.39648949688716845,
+    "amnesiac_fraction": 0.2908515552187613,
+    "rebel_fraction": 0.056774564380004,
+    "contrarian_fraction": 0.014106618246331,
+    "eschewer_fraction": 0.05719833116032,
+    "anarchic_fraction": 0.187927596169309,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "HybridPartialDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.217942015685129,
+    "c1": 0.9470253101282,
+    "c2": 1.6932354828477292,
+    "amnesiac_c": 2.3846785377763804,
+    "anarchic_c": 0.338048344385129,
+    "amnesiac_fraction": 0.020484581700167,
+    "anarchic_fraction": 0.076962973646188,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "IKUNDE": {
+   "params": {
+    "CR": 0.300661563587457,
+    "F": 0.184655092797816,
+    "k": 11,
+    "crowding_weight": 0.011594372678993,
+    "window": 3,
+    "density_scale": "relative"
+   }
+  },
+  "IKUNGA": {
+   "params": {
+    "crossover_probability": 0.802141952880656,
+    "sbx_distribution_index": 2.700527371545094,
+    "mutation_distribution_index": 98.54451368812465,
+    "k": 14,
+    "crowding_weight": 0.155045840803704,
+    "window": 1,
+    "elite_size": 10,
+    "density_scale": "raw"
+   }
+  },
+  "IKUNPSO": {
+   "params": {
+    "w": 0.115852163429052,
+    "c1": 3.5258338630039785,
+    "c2": 0.338461108949753,
+    "k": 15,
+    "crowding_weight": 0.019294270484375,
+    "window": 10,
+    "repulsion_coefficient": 0.01284740660855,
+    "density_scale": "raw",
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "JADE": {
+   "params": {
+    "p_best_rate": 0.14484995571705,
+    "adaptation_rate": 0.056536938020368,
+    "archive_rate": 2.016483204203648
+   }
+  },
+  "JSO": {
+   "params": {
+    "population_coefficient": 8.28926953385283,
+    "memory_size": 4,
+    "p_max": 0.108995530822898,
+    "archive_size_rate": 2.015193748694408,
+    "initial_memory_f": 0.446307072014717,
+    "initial_memory_cr": 0.326832073726814,
+    "fixed_memory_value": 0.52701420824809
+   }
+  },
+  "LSHADE": {
+   "params": {
+    "pop_size_factor": 5,
+    "memory_size": 21,
+    "p_best_rate": 0.148458827908429,
+    "archive_size_rate": 1.4592216336274246
+   }
+  },
+  "LSRTDE": {
+   "params": {
+    "population_factor": 9.396261337136197,
+    "memory_size": 13,
+    "sigma_f": 0.11888313743772,
+    "sigma_cr": 0.188256359869906,
+    "initial_memory_cr": 0.674465927005249
+   }
+  },
+  "PSO": {
+   "params": {
+    "w": 0.33161289941777,
+    "c1": 3.024418008288392,
+    "c2": 2.2194571233371194,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "RebelRejectorPSO": {
+   "params": {
+    "w": 0.284095511127791,
+    "c1": 1.580564223916146,
+    "c2": 3.476566518269471,
+    "ac1": 2.6241915053165554,
+    "ac2": 3.971324687050016,
+    "rebel_fraction": 0.067396771085523,
+    "rejector_fraction": 0.410397711436312,
+    "constraint_handling_mode": "bounce"
+   }
+  },
+  "SHADE": {
+   "params": {
+    "population_factor": 1.2671751084771528,
+    "memory_size": 90,
+    "archive_size_rate": 1.7805987418531506,
+    "p_max": 0.365374287065483
+   }
+  },
+  "SPSO2011": {
+   "params": {
+    "swarm_size": 163,
+    "w": 0.584746100803629,
+    "c": 1.4558743183119556,
+    "k": 6
+   }
+  }
+ }
+}

@@ -1,0 +1,12 @@
+# IDE and Python caches
+.idea/
+.vscode/
+__pycache__/
+*.egg-info/
+# results and data stay outside the repository (published as a dataset; instances are fetched)
+experiment_results/
+papers/parameter_transfer/tables/
+papers/parameter_transfer/figures/
+papers/parameter_transfer/*numbers.json
+papers/parameter_transfer/ola2027/tables/
+papers/parameter_transfer/ola2027/figures/

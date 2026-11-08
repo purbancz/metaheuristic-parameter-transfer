@@ -1,0 +1,26 @@
+short_name,roster_name,group
+PSO,PSO,basic PSO
+SPSO2011,SPSO2011,reference PSO
+RR-PSO,RebelRejectorPSO,role pair
+EE-PSO,EschewerEscapistPSO,role pair
+CD-PSO,ContrarianDefeatistPSO,role pair
+AddPSO,HybridAdditivePSO,role hybrid
+AddPSO-W,HybridAdditivePSO_WithWanderer,role hybrid
+AddPSO-R,HybridAdditivePSO_WithRandom,role hybrid
+AddPSO-R-Var,HybridAdditivePSO_WithRandom_Var,role hybrid
+DPSO-W,HybridDisjointPSO_WithWanderer,role hybrid
+FDPSO,HybridFullDisjointPSO,role hybrid
+FDPSO-R,HybridFullDisjointPSO_WithRandom,role hybrid
+FDPSO-R-Var,HybridFullDisjointPSO_WithRandom_Var,role hybrid
+PDPSO,HybridPartialDisjointPSO,role hybrid
+PDPSO-R,HybridPartialDisjointPSO_WithRandom,role hybrid
+PDPSO-R-Var,HybridPartialDisjointPSO_WithRandom_Var,role hybrid
+JADE,JADE,DE
+SHADE,SHADE,DE
+L-SHADE,LSHADE,DE
+jSO,JSO,DE
+L-SRTDE,LSRTDE,DE
+IKUN-DE,IKUNDE,IKUN
+IKUN-GA,IKUNGA,IKUN
+IKUN-PSO,IKUNPSO,IKUN
+AGOA,AGOA,reference

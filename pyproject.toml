@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metaheuristiczoo"
+version = "1.0"
+description = "Code of the parameter-transfer study: 25 continuous metaheuristics decoded for maximum coverage, their tuned configurations, the experiment runner and the analysis"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Piotr Urbańczyk" }, { name = "Aleksandra Urbańczyk" }]
+# requirements.txt pins the versions used and checked (jmetalpy 1.7.0 and numpy 2.2.6 for the runs).
+dependencies = ["jmetalpy", "numpy", "scipy", "pandas", "h5py", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"metaheuristiczoo.experiment.parameters" = ["*.json"]
+"metaheuristiczoo.problem.subset.transfer" = ["reference_values.json"]

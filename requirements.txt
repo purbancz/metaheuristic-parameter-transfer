@@ -1,0 +1,9 @@
+# The runs of the study used jmetalpy 1.7.0 and numpy 2.2.6 (recorded in every result file); keep these two
+# pinned, since the algorithms' random streams depend on them. The other versions are those the analysis
+# was checked with.
+jmetalpy==1.7.0
+numpy==2.2.6
+scipy==1.15.2
+pandas==2.2.3
+h5py==3.16.0
+matplotlib==3.10.1

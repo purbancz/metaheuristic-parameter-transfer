@@ -1,0 +1,199 @@
+{
+ "name": "swap_2026_11_continuous_takes_subset_base",
+ "preamble": {
+  "kind": "control",
+  "role": "control",
+  "summary": "Parameter-group swap: for the seven algorithms of the follow-ups, the values of control_2026_10_continuous_bounce with the 'base' group taken from tuned_2026_10_subset_combined. Run with EXPERIMENT_CONTROL_SET.",
+  "procedure": {
+   "derived_from": "control_2026_10_continuous_bounce (receiver) and tuned_2026_10_subset_combined (donor): params of each block, unchanged except the swapped group",
+   "group": "base",
+   "group_meaning": "PSO line: w, c1, c2. IKUNGA: its variation operators (crossover_probability, sbx_distribution_index, mutation_distribution_index)",
+   "swapped_parameters": {
+    "HybridAdditivePSO_WithWanderer": [
+     "w",
+     "c1",
+     "c2"
+    ],
+    "HybridDisjointPSO_WithWanderer": [
+     "w",
+     "c1",
+     "c2"
+    ],
+    "HybridAdditivePSO_WithRandom_Var": [
+     "w",
+     "c1",
+     "c2"
+    ],
+    "HybridPartialDisjointPSO_WithRandom_Var": [
+     "w",
+     "c1",
+     "c2"
+    ],
+    "HybridAdditivePSO_WithRandom": [
+     "w",
+     "c1",
+     "c2"
+    ],
+    "HybridPartialDisjointPSO_WithRandom": [
+     "w",
+     "c1",
+     "c2"
+    ],
+    "IKUNGA": [
+     "crossover_probability",
+     "sbx_distribution_index",
+     "mutation_distribution_index"
+    ]
+   },
+   "unchanged_everywhere": [
+    "assign_flags_every_iteration",
+    "assign_roles_every_iteration",
+    "constraint_handling_mode"
+   ],
+   "values_tuned_on": "none: a recombination of two tuned configurations, not a tuned set"
+  },
+  "selection": "params = the receiver's first final elite with the donor's group",
+  "fixed_settings": {
+   "values": {
+    "constraint_handling_mode": "bounce"
+   },
+   "why": "a setting no tuning run raced, written into every algorithm that takes it",
+   "not_applied": {
+    "AGOA": "the constructor refuses it (AGOA takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNDE": "the constructor refuses it (IKUNDE takes no parameter(s) ['constraint_handling_mode'])",
+    "IKUNGA": "the constructor refuses it (IKUNGA takes no parameter(s) ['constraint_handling_mode'])",
+    "JADE": "the constructor refuses it (JADE takes no parameter(s) ['constraint_handling_mode'])",
+    "JSO": "the constructor refuses it (JSO takes no parameter(s) ['constraint_handling_mode'])",
+    "LSHADE": "the constructor refuses it (LSHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "LSRTDE": "the constructor refuses it (LSRTDE takes no parameter(s) ['constraint_handling_mode'])",
+    "SHADE": "the constructor refuses it (SHADE takes no parameter(s) ['constraint_handling_mode'])",
+    "SPSO2011": "the constructor refuses it (SPSO2011 takes no parameter(s) ['constraint_handling_mode'])"
+   }
+  }
+ },
+ "algorithms": {
+  "HybridAdditivePSO_WithWanderer": {
+   "params": {
+    "w": 0.437341364282388,
+    "c1": 1.8460220932644484,
+    "c2": 3.7513047551832583,
+    "wanderer_c": 2.4478527881448517,
+    "std_cognitive_prob": 0.338062934253344,
+    "std_social_prob": 0.892109911794869,
+    "wanderer_prob": 0.087573888539645,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['w', 'c1', 'c2'] taken from tuned_2026_10_subset_combined"
+  },
+  "HybridDisjointPSO_WithWanderer": {
+   "params": {
+    "w": 0.651779436530863,
+    "c1": 0.758084896912408,
+    "c2": 3.4205076737818163,
+    "wanderer_c": 0.180485661589188,
+    "wanderer_fraction": 0.09451461458033,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['w', 'c1', 'c2'] taken from tuned_2026_10_subset_combined"
+  },
+  "HybridAdditivePSO_WithRandom_Var": {
+   "params": {
+    "w": 0.651553255080255,
+    "c1": 1.59177344573173,
+    "c2": 2.884257343360388,
+    "amnesiac_c": 0.804999796408553,
+    "anarchic_c": 0.536753069804812,
+    "std_cognitive_prob": 0.44970884585493,
+    "amnesiac_prob": 0.049026948668944,
+    "std_social_prob": 0.61214834743763,
+    "anarchic_prob": 0.019560972160974,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['w', 'c1', 'c2'] taken from tuned_2026_10_subset_combined"
+  },
+  "HybridPartialDisjointPSO_WithRandom_Var": {
+   "params": {
+    "w": 0.237277023706902,
+    "c1": 0.762967822231035,
+    "c2": 0.473517230770953,
+    "amnesiac_c": 2.3846785377763804,
+    "anarchic_c": 0.338048344385129,
+    "amnesiac_fraction": 0.020484581700167,
+    "anarchic_fraction": 0.076962973646188,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['w', 'c1', 'c2'] taken from tuned_2026_10_subset_combined"
+  },
+  "HybridAdditivePSO_WithRandom": {
+   "params": {
+    "w": 0.278033460748667,
+    "c1": 4.481387327807766,
+    "c2": 5.243525580542122,
+    "rejector_c": 0.371242676141806,
+    "defeatist_c": 1.1206536448720072,
+    "escapist_c": 3.795129854159322,
+    "amnesiac_c": 3.04802730395987,
+    "rebel_c": 0.747856719714708,
+    "contrarian_c": 1.8270509751725876,
+    "eschewer_c": 4.985186966326486,
+    "anarchic_c": 2.752495893970153,
+    "std_cognitive_prob": 0.80999796664055,
+    "rejector_prob": 0.282684140146158,
+    "defeatist_prob": 0.041474556985266,
+    "escapist_prob": 0.192822538903934,
+    "amnesiac_prob": 0.058395047078659,
+    "std_social_prob": 0.620937521243569,
+    "rebel_prob": 0.302871830912933,
+    "contrarian_prob": 0.024001065996271,
+    "eschewer_prob": 0.046808409324421,
+    "anarchic_prob": 0.284568856962224,
+    "assign_flags_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['w', 'c1', 'c2'] taken from tuned_2026_10_subset_combined"
+  },
+  "HybridPartialDisjointPSO_WithRandom": {
+   "params": {
+    "w": 0.592396363616368,
+    "c1": 0.886205953968615,
+    "c2": 3.454584249701605,
+    "rejector_c": 1.2534484060734707,
+    "defeatist_c": 2.9359858759304616,
+    "escapist_c": 0.021613719668271,
+    "amnesiac_c": 2.9353363539078576,
+    "rebel_c": 1.9574519426782049,
+    "contrarian_c": 2.351439451643151,
+    "eschewer_c": 3.066099982432391,
+    "anarchic_c": 0.81905025039418,
+    "rejector_fraction": 0.22309846603914416,
+    "defeatist_fraction": 0.08956048185492618,
+    "escapist_fraction": 0.39648949688716845,
+    "amnesiac_fraction": 0.2908515552187613,
+    "rebel_fraction": 0.056774564380004,
+    "contrarian_fraction": 0.014106618246331,
+    "eschewer_fraction": 0.05719833116032,
+    "anarchic_fraction": 0.187927596169309,
+    "assign_roles_every_iteration": true,
+    "constraint_handling_mode": "bounce"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['w', 'c1', 'c2'] taken from tuned_2026_10_subset_combined"
+  },
+  "IKUNGA": {
+   "params": {
+    "crossover_probability": 0.972704524202105,
+    "sbx_distribution_index": 3.0259120226946075,
+    "mutation_distribution_index": 16.797950021342416,
+    "k": 14,
+    "crowding_weight": 0.155045840803704,
+    "window": 1,
+    "elite_size": 10,
+    "density_scale": "raw"
+   },
+   "notes": "params of control_2026_10_continuous_bounce with ['crossover_probability', 'sbx_distribution_index', 'mutation_distribution_index'] taken from tuned_2026_10_subset_combined"
+  }
+ }
+}

@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below (preferred-citation) and this software."
+type: software
+title: "Code for: Transferring tuned configurations of continuous metaheuristics to subset selection"
+abstract: >-
+  Code of a parameter-swap study on maximum coverage: 25 continuous metaheuristics decoded to subset
+  selection, their configurations tuned with irace on subset problems and on continuous benchmarks, the
+  experiment runner, the follow-up parameter sets, and the scripts that produce the tables and figures
+  of the paper.
+authors:
+  - family-names: "Urbańczyk"
+    given-names: "Piotr"
+    orcid: "https://orcid.org/0000-0001-8838-2354"
+    affiliation: "Sano – Centre for Computational Personalised Medicine"
+    email: "p.urbanczyk@sanoscience.org"
+  - family-names: "Urbańczyk"
+    given-names: "Aleksandra"
+    orcid: "https://orcid.org/0000-0002-6040-554X"
+    affiliation: "AGH University of Krakow"
+    email: "aurbanczyk@agh.edu.pl"
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/purbancz/metaheuristic-parameter-transfer"
+keywords:
+  - metaheuristics
+  - parameter tuning
+  - irace
+  - configuration transfer
+  - subset selection
+  - maximum coverage
+  - particle swarm optimization
+  - differential evolution
+preferred-citation:
+  type: conference-paper
+  title: "Transferring tuned configurations of continuous metaheuristics to subset selection: a parameter-swap study on maximum coverage"
+  authors:
+    - family-names: "Urbańczyk"
+      given-names: "Piotr"
+      orcid: "https://orcid.org/0000-0001-8838-2354"
+    - family-names: "Urbańczyk"
+      given-names: "Aleksandra"
+      orcid: "https://orcid.org/0000-0002-6040-554X"
+  conference:
+    name: "International Conference on Optimization and Learning (OLA 2027)"
+    city: "Kraków"
+    country: "PL"
+  year: 2027
+  status: "prepared for submission"
