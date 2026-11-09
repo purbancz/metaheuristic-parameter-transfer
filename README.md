@@ -1,16 +1,20 @@
 # Code for "Transferring tuned configurations of continuous metaheuristics to subset selection"
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/)
+[![Built on jMetalPy](https://img.shields.io/badge/built%20on-jMetalPy%201.7-orange.svg)](https://github.com/jMetal/jMetalPy)
+[![Paper: OLA 2027](https://img.shields.io/badge/paper-OLA%202027%20(in%20preparation)-lightgrey.svg)](https://ola2027.sciencesconf.org/)
+
 This is the code of the paper
 
 > P. Urbańczyk, A. Urbańczyk. *Transferring tuned configurations of continuous metaheuristics to subset
-> selection: a parameter-swap study on maximum coverage.* Submitted to OLA 2027.
+> selection: a parameter-swap study on maximum coverage.* In preparation for OLA 2027.
 
 It contains the 25 metaheuristics of the study and the four baselines, the decoder that turns a continuous
 state into a subset, the ten maximum-coverage instances, the tuned configurations, the experiment runner,
 and the scripts that produce every table and figure of the paper. It is the part of the authors' research
 package `metaheuristiczoo` that the study uses, reduced to what the study runs; the code of the algorithms
-is copied from it without changes to what it computes. The result files are published separately as a
-dataset (RODBUK).
+is copied from it without changes to what it computes.
 
 ## Contents
 
