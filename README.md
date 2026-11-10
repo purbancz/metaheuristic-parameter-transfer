@@ -1,5 +1,7 @@
 # Code for "Transferring tuned configurations of continuous metaheuristics to subset selection"
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24090959.svg)](https://doi.org/10.5281/zenodo.24090959)
+[![Data](https://img.shields.io/badge/data-RODBUK-1f6feb)]([https://doi.org/XXXXX](https://doi.org/10.71580/SANO/QPU2E7))
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/)
 [![Built on jMetalPy](https://img.shields.io/badge/built%20on-jMetalPy%201.7-orange.svg)](https://github.com/jMetal/jMetalPy)
